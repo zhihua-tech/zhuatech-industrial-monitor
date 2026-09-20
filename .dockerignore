@@ -1,0 +1,8 @@
+.git
+.github
+data
+output
+docs/images
+__pycache__
+*.pyc
+.DS_Store

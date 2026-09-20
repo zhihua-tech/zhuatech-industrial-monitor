@@ -1,0 +1,9 @@
+[project]
+name = "zhuatech-industrial-monitor"
+version = "1.0.0"
+description = "知华工业设备监控与OEE平台社区版"
+requires-python = ">=3.9"
+license = { text = "LicenseRef-ZhuaTech-NonCommercial-1.0" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

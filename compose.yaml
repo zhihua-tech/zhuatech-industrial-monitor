@@ -1,0 +1,11 @@
+services:
+  monitor:
+    build: .
+    ports: ["18084:18084"]
+    environment:
+      PORT: 18084
+      MONITOR_API_KEY: ${MONITOR_API_KEY:-zhuatech-demo-key}
+      MONITOR_DB: /app/data/monitor.db
+    volumes: ["monitor-data:/app/data"]
+volumes:
+  monitor-data:
