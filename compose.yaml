@@ -7,5 +7,11 @@ services:
       MONITOR_API_KEY: ${MONITOR_API_KEY:-zhuatech-demo-key}
       MONITOR_DB: /app/data/monitor.db
     volumes: ["monitor-data:/app/data"]
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:18084/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
 volumes:
   monitor-data:
